@@ -1,0 +1,84 @@
+Example1
+========
+
+C:\Users\Manoj>mvn -version
+
+D:\Spring Program\Maven Apps\Ex1>mvn archetype:generate
+
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 2072:
+
+Choose a number: 8:
+
+Define value for property 'groupId': mkj
+
+Define value for property 'artifactId': MathProj1
+
+Define value for property 'version' 1.0-SNAPSHOT: : 1.0
+
+Define value for property 'package' mkj: : com.mj.source
+
+ Y: : y
+
+
+Build
+=====
+D:\Spring Program\Maven Apps\Ex1>cd MathProj1
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>mvn package
+
+Run
+===
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>java -cp target/MathProj1-1.0.jar com.mj.source.Arithmetic
+Sum is ::70
+
+
+After Change in Implementation
+==============================
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>mvn clean
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>mvn package
+
+============OR================
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>mvn clean package
+
+==========================================================
+
+D:\Spring Program\Maven Apps\Ex1\MathProj1>java -cp target/MathProj1-1.0.jar com.mj.source.Arithmetic
+Sum is ::90
+
+Example2
+========
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn archetype:generate -DgroupId=mkj -DartifactId=MathProj2 -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=1.0 -Dpackage=com.mj.source -DinteractiveMode=false
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>cd MathProj2
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn test
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn surefire-report:report
+
+D:\NareshIT Bhulu\Spring Program\Maven Apps\Ex2\MathProj2>mvn clean
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn surefire-report:report-only
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn surefire-report:report
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn site
+
+D:\Spring Program\Maven Apps\Ex2\MathProj2>mvn install
+
+D:\Spring Program\Maven Apps\EX4>mvn eclipse:eclipse
+
+Example4 (WebApp)
+========
+
+D:\Spring Program\Maven Apps\EX4>md EX4 
+
+D:\Spring Program\Maven Apps\EX4>cd Ex4 
+
+D:\Spring Program\Maven Apps\EX4>mvn archetype:generate -DgroupId=mkj_web -DartifactId=WishApp -DarchetypeArtifactId=maven-archetype-webapp -Dpackage=com.mj.servlet -DinteractiveMode=false -Dpackaging=war
+
+D:\Spring Program\Maven Apps\EX4\WishApp>mvn tomcat7:run
